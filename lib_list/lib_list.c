@@ -141,3 +141,8 @@ void ListTraverse(SqList L, void(*vi)(ElemType *)) { /* 初始条件：顺序线
         vi(p++);
     printf("\n");
 }
+
+
+void show(ElemType *elem) {
+    printf("%d\r\n", *elem);
+}

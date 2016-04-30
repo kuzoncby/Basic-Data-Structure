@@ -42,18 +42,14 @@ void DestroyList(SqList *L);
 /* 操作结果：将L重置为空表 */
 void ClearList(SqList *L);
 
-
 /* 操作结果：若L为空表，则返回TRUE，否则返回FALSE */
 Status ListEmpty(SqList L);
-
 
 /* 操作结果：返回L中数据元素个数 */
 int ListLength(SqList L);
 
-
 /* 操作结果：用e返回L中第i个数据元素的值 */
 Status GetElem(SqList L, int i, ElemType *e);
-
 
 /* 操作结果：返回L中第1个与e满足关系compare()的数据元素的位序。 */
 int LocateElem(SqList L, ElemType e,
@@ -68,10 +64,10 @@ Status NextElem(SqList L, ElemType cur_e, ElemType *next_e);
 /* 操作结果：在L中第i个位置之前插入新的数据元素e，L的长度加1 */
 Status ListInsert(SqList *L, int i, ElemType e);
 
-
 /* 操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1 */
 Status ListDelete(SqList *L, int i, ElemType *e);
 
+void show(ElemType *elem);
 
 /* 操作结果：依次对L的每个数据元素调用函数vi()的形参加'&'，表明可通过调用vi()改变元素的值 */
 void ListTraverse(SqList L, void(*vi)(ElemType *));
