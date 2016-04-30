@@ -9,8 +9,8 @@
 #include "lib_list.h"
 
 /* 顺序表示的线性表的基本操作(12个) */
-void InitList(SqList *L) /* 算法2.3 */
-{ /* 操作结果：构造一个空的顺序线性表L */
+/* 算法2.3 */
+void InitList(SqList *L) { /* 操作结果：构造一个空的顺序线性表L */
     L->elem = malloc(LIST_INIT_SIZE * sizeof(ElemType));
     if (!L->elem)
         exit(OVERFLOW); /* 存储分配失败 */
