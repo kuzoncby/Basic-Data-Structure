@@ -19,16 +19,19 @@ typedef int Status;
 #define INFEASIBLE -1
 
 /* 线性表的动态分配顺序存储结构 */
-#define LIST_INIT_SIZE 10 /* 线性表存储空间的初始分配量 */
-#define LIST_INCREMENT 2 /* 线性表存储空间的分配增量 */
+#define LIST_INIT_SIZE 10 /* 线性表结点数目初始分配量 */
+#define LIST_INCREMENT 2 /* 线性表结点大小 */
 
+/* 结点结构 */
 typedef long ElemType;
 
+/* 表结构 */
 typedef struct {
+    /* 结点 */
     ElemType *elem;
-    /* 存储空间基址 */
+    /* 结点大小 */
     int length;
-    /* 当前长度 */
+    /* 结点数目 */
     int listsize; /* 当前分配的存储容量(以sizeof(ElemType)为单位) */
 } SqList;
 
