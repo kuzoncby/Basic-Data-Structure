@@ -146,3 +146,20 @@ void ListTraverse(SqList L, void(*vi)(ElemType *)) { /* 初始条件：顺序线
 void show(ElemType *elem) {
     printf("%d\r\n", *elem);
 }
+
+int main() {
+    SqList L;
+    InitList(&L);
+    ListInsert(&L, 1, 56);
+    ListInsert(&L, 2, 34);
+    ListInsert(&L, 3, 24);
+
+    long e;
+    ListDelete(&L, 2, &e);
+    printf("表长度 --- %d", ListLength(L));
+    printf("\r\n");
+    printf("-----表内容-----");
+    printf("\r\n");
+    ListTraverse(L, show);
+    return 0;
+}
