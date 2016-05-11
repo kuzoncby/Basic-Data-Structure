@@ -29,41 +29,41 @@ int pop(void);
 //显示操作
 void display(void);
 
-void main() {
-    int choice;
-    int option = 1;
-    s.top = -1;
-
-    printf("这是我所能做的\n");
-    while (option) {
-        printf("------------------------------------------\n");
-        printf("      1    -->    添加               \n");
-        printf("      2    -->    删除               \n");
-        printf("      3    -->    显示               \n");
-        printf("      4    -->    退出           \n");
-        printf("------------------------------------------\n");
-
-        printf("请做出选择\n");
-        scanf("%d", &choice);
-        switch (choice) {
-            case 1:
-                push();
-                break;
-            case 2:
-                pop();
-                break;
-            case 3:
-                display();
-                break;
-            case 4:
-                return;
-        }
-        fflush(stdin);
-//        printf("您要继续吗(Yes/No)?\n");
-//        scanf("%c", &option);
-        option = 1;
-    }
-}
+//void main() {
+//    int choice;
+//    int option = 1;
+//    s.top = -1;
+//
+//    printf("这是我所能做的\n");
+//    while (option) {
+//        printf("------------------------------------------\n");
+//        printf("      1    -->    添加               \n");
+//        printf("      2    -->    删除               \n");
+//        printf("      3    -->    显示               \n");
+//        printf("      4    -->    退出           \n");
+//        printf("------------------------------------------\n");
+//
+//        printf("请做出选择\n");
+//        scanf("%d", &choice);
+//        switch (choice) {
+//            case 1:
+//                push();
+//                break;
+//            case 2:
+//                pop();
+//                break;
+//            case 3:
+//                display();
+//                break;
+//            case 4:
+//                return;
+//        }
+//        fflush(stdin);
+////        printf("您要继续吗(Yes/No)?\n");
+////        scanf("%c", &option);
+//        option = 1;
+//    }
+//}
 
 /*  添加操作 */
 void push() {
